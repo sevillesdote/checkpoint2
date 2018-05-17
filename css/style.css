@@ -1,4 +1,10 @@
 body{
   margin: 0 auto;
   font-size: 62.5%;
+  /* i read at https://kyleschaeffer.com/development/css-font-size-em-vs-px-vs-pt-vs/
+  that using percent to font-size the body element helps users scale text
+  consistently on any device, and then using em to size all child elements keeps
+  it mobile-friendly but still scalable across a smaller, more consistent
+  range than percent only. the base % of 62.5 also translates to 1em = 10pt,
+  1.1em = 11 pt, 1.2 em = 12 pt etc. in the children. */
 }
