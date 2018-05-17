@@ -8,9 +8,16 @@ body{
   range than percent only. the base % of 62.5 also translates to 1em = 10pt,
   1.1em = 11 pt, 1.2 em = 12 pt etc. in the children. */
 }
+li {
+  list-style-type: none;
+}
 .release-nav{
   display: flex;
 }
 .release-nav li{
-  
+
+}
+.aug-em{
+  color: orange;
+  font-style: normal;
 }
