@@ -16,13 +16,29 @@ img{
   height: 4em;
   padding: 0.4em;
 }
+em{
+  color: red;
+}
 .release-nav{
   display: flex;
   justify-content: flex-end;
 }
-.release-nav ul{
+ul{
+  display: flex;
+  justify-content: space-between;
+  padding: 0;
+}
+nav{
   display: flex;
   justify-content: space-evenly;
+}
+.text-nav{
+  display: flex;
+  justify-content: space-between;
+}
+.social-nav{
+  display: flex;
+  justify-content: space-between;
 }
 .aug-em{
   color: orange;
