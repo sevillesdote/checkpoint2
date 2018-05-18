@@ -28,15 +28,15 @@ ul{
   justify-content: space-between;
   padding: 0;
 }
-nav{
+header{
   display: flex;
   justify-content: space-evenly;
 }
-.text-nav{
+nav{
   display: flex;
   justify-content: space-between;
 }
-.social-nav{
+aside{
   display: flex;
   justify-content: space-between;
 }
