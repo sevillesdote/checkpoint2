@@ -8,7 +8,12 @@ body{
   range than percent only. the base % of 62.5 also translates to 1em = 10pt,
   1.1em = 11 pt, 1.2 em = 12 pt etc. in the children. */
 }
+a{
+  text-decoration: none;
+}
 li {
+  display: flex;
+  align-items: center;
   list-style-type: none;
 }
 img{
@@ -24,23 +29,106 @@ em{
   justify-content: flex-end;
 }
 ul{
+  /* i figured out why i couldn't center these in line with the social-media
+  icons in checkpoint 1. flexbox only applies to the first child element, so i
+  needed to assign display: flex to each level of nested <div>s that i needed
+  to center. i added display: flex and styling to the <nav> container this is
+  nested in to make it center in the header. */
   display: flex;
   justify-content: space-between;
+  margin: 0;
   padding: 0;
 }
 header{
+  height: 5em;
   display: flex;
   justify-content: space-evenly;
+  align-items: center;
+  /* border: 1px solid black; */
 }
 nav{
   display: flex;
   justify-content: space-between;
 }
+nav li{
+  padding: 1em;
+}
 aside{
   display: flex;
   justify-content: space-between;
 }
+aside li{
+  margin-top: 0.15em;
+  /* the social-media icons aren't quite centered, so this top margin is to even
+  out the total size of the raster drawings */
+  padding: 0.3em;
+}
 .aug-em{
   color: orange;
   font-style: normal;
+}
+.focus-li {
+  display: flex;
+  align-items: flex-start;
+  position: relative;
+  padding: 0.4em 0.4em 0.4em 0;
+  margin: 0.4em;
+  border-radius: 0.4em;
+  background-color: orange;
+}
+.focus-li::before {
+  position: absolute;
+  content: "";
+  left: -0.8em;
+  bottom: 0;
+  width: 0;
+  height: 0;
+  border-right: 0.8em solid orange;
+  border-top: 8.3em solid transparent;
+  border-bottom: 8.3em solid transparent;
+}
+.tooltip .tooltiptext {
+  position: absolute;
+  visibility: hidden;
+  z-index: 1;
+  /* i couldn't figure out how to use flex to auto-center the tooltip box (which
+  might require javascript anyway), and i was running out of time, so i just manually
+  centered it using the top property. */
+  top: 6em;
+  right: 1.1em;
+  background-color: rgba(0, 0, 0, 0.77);
+  font-family: 'Varela', sans-serif;
+  color: ghostwhite;
+  font-size: 1.2em;
+  padding: 0.3em 0.5em;
+  margin-left: 0.3em;
+  border-radius: 0.4em;
+}
+.triangle-container{
+  display: flex;
+  align-items: center;
+  height: inherit;
+}
+.triangle-left {
+  width: 0;
+  height: 0;
+  border-top: 1em solid transparent;
+  border-right: 1em solid #262626;
+  border-bottom: 1em solid transparent;
+}
+.tooltip-build-2 {
+  /* i couldn't figure out how to use flex to automate the width of the tooltip
+  box, and i was running out of time, so i just manually stuck it in there
+  and customized it to each build. obviously this is cheating! */
+  width: 1.35em;
+  right: 1.01em;
+  text-align: right;
+}
+.listened {
+  font-weight: bold;
+  color: magenta;
+}
+.focus-img{
+  width: 15em;
+  height: 15em;
 }
