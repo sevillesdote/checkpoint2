@@ -70,6 +70,14 @@ aside li{
   color: orange;
   font-style: normal;
 }
+.release-container{
+  display:flex;
+  flex-direction: column;
+  /* this is to keep 'aug' tab nested with the .release-nav (the album pictures)
+  but still appear below it, as if the tab was a block element. the next element
+  will also appear below the bottom edge of the 'aug' tab, instead of below the
+  bottom edge of .release-nav (which would be inline with the 'aug' tab).  */
+}
 .release-nav{
   box-sizing: border-box;
   position: relative;
@@ -83,16 +91,28 @@ aside li{
   border: 1px solid orange;
   border-width: 1px 0;
 }
+.augtab{
+  align-self: flex-end;
+  /* this is to make the 'aug' tab justify to the right. */
+  height: 1.3em;
+  width: 3.2em;
+  margin: 0 0.1em;
+  font-size: 15px;
+  text-align: center;
+  background-color: orange;
+  border-radius: 0 0 4px 4px;
+  color: rgba(0,0,0,0.8);
+}
 .trigger{
-  /* display: block; */
+  display: block;
   transition: width 0.2s, height 0.2s, transform 0.2s;
 }
 .trigger:hover {
-  /* display: inline-block; */
+  display: inline-block;
   margin: 0.2em auto;
   transform: scale(4) translate(-25%, 25%);
 }
-.focus-li {
+.focus-li:hover {
   display: flex;
   align-items: center;
   position: relative;
@@ -100,8 +120,23 @@ aside li{
   margin: 0.4em;
   border-radius: 0.4em;
   background-color: orange;
+  border: 1px solid orange;
+}
+.focus-li .build-3 {
+  background-color: transparent;
 }
 .focus-li:before {
+  position: absolute;
+  content: "";
+  left: -0.9em;
+  bottom: 0;
+  width: 0;
+  height: 0;
+  border-right: 0.8em solid orange;
+  border-top: 8.3em solid transparent;
+  border-bottom: 8.3em solid transparent;
+}
+.focus-li:before .build-3 {
   position: absolute;
   content: "";
   left: -0.8em;
@@ -113,6 +148,7 @@ aside li{
   border-bottom: 8.3em solid transparent;
 }
 .triangle-left {
+  /* visibility: hidden; */
   display: flex;
   align-items: center;
   width: 0;
