@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>Aug: your audio aggregator</title>
-    <link rel="stylesheet" type="text/css" href="css/reset.css">
+    <link rel="stylesheet" type="text/css" href="css/normalize.css">
     <link rel="stylesheet" type="text/css" href="css/style.css">
 <link href="https://fonts.googleapis.com/css?family=Varela|Varela+Round"
 rel="stylesheet">
@@ -83,7 +83,8 @@ rel="stylesheet">
       </aside>
     </header>
     <main>
-      <div class="release-nav">
+      <div class="release-container">
+        <div class="release-nav">
         <ul>
           <li>
             <img src="images\51iwGgCY-GL._SS500.jpg" alt="Bobby Feeno _
@@ -165,9 +166,10 @@ rel="stylesheet">
             alt="Janelle Monae - Dirty Computer [Explicit]">
           </li>
         </ul>
+        <div class="augtab">
+          aug
+        </div>
       </div>
-      <div class="augtab">
-        aug
       </div>
       <section>
         <div class="">
@@ -203,9 +205,7 @@ button links, but i have to move on. -->
         <h1>What is aug?</h1>
         <p>
           <em class="aug-em">aug</em> keeps track of the songs you listen to online, and creates a
-          'mosaic' dashboard from each release's album artwork. You can hover
-          over each release to reveal more info about the songs you've listened
-          to.
+          'mosaic' dashboard from each release's album artwork.
         </p>
         <p>
           <em class="aug-em">aug</em> can recognize songs from just about any online music source.
@@ -281,7 +281,7 @@ button links, but i have to move on. -->
                 <li class="trigger">
                   <img src="images\bicep-glue-ep.jpg" alt="Bicep _ Glue EP">
                 </li>
-                <li class="trigger">
+                <li class="focus-li trigger">
                   <img src="images\compa-not-a-kick.jpg" alt="Compa _ Not a
                   Kick">
                 </li>
@@ -314,98 +314,101 @@ button links, but i have to move on. -->
             </div>
           </div>
         <h2>See what you hear.</h2>
-        <p><em class="aug-em">aug's</em> main dashboard is a simple mosaic of all the releases you've
-          listened to online. Hover over any release to see which tracks you
-          heard from that release, when, how many times, at which site(s) and
-          for how long.
+        <p><em class="aug-em">aug's</em> main dashboard shows you what you've
+          listened to online. Hover over any release to to reveal more about
+          what you've listened to.
         </p>
-          <img src="builds/build-images/build3b.png" alt="screenshot of aug app">
-          <div class="release-nav">
-            <ul>
-              <li>
-                <img src="images\51iwGgCY-GL._SS500.jpg" alt="Bobby Feeno _
-                Flamingo & Koval (Explicit)">
-              </li>
-              <li>
-                <img src="images\CS3711831-02A-BIG.jpg" alt="VARIOUS ARTISTS
-                _ Partial#4">
-              </li>
-              <li>
-                <img src="images\CS3697651-02A-BIG.jpg" alt="JIMPSTER _
-                Burning Up">
-              </li>
-              <li>
-                <img src="images\CS3656284-02A-BIG.jpg" alt="PEGGY GOU _
-                It Makes You Forget (Itgehane)">
-              </li>
-              <li>
-                <img src="images\516jf5plwaL._SS500.jpg" alt="Solange _
-                A Seat at the Table [Explicit]">
-              </li>
-              <li>
-                <img src="images\CS3687657-02A-BIG.jpg"
-                alt="MAJISTRATE/PACSO/DOMINATOR & LOGAN D/EGO TRIPPIN _ Re-Fixes">
-              </li>
-              <li>
-                <img src="images\dynamite-mc-origin-unknown-hotness.jpg"
-                alt="Dynamite MC, Origin Unknown _ Hotness">
-              </li>
-              <li>
-                <img src="images\j-cole-kod-explicit.jpg" alt="J. Cole _
-                KOD [Explicit]">
-              </li>
-              <li>
-                <img src="images\sub-zero-n-dj-limited-vibrations-ep.jpg"
-                alt="Sub Zero & DJ Limited _ Vibrations EP">
-              </li>
-              <li>
-                <img src="images\sza-ctrl-explicit.jpg"
-                alt="SZA _ Ctrl [Explicit]">
-              </li>
-              <li>
-                <img src="images\ram-trilogy-various-artists-ram-25.jpg"
-                alt="Ram Trilogy/ Various Artists _ Ram 25">
-              </li>
-              <li>
-                <img src="images\prescription-pricing-authority-1-2-1-lucky-duck.jpg"
-                alt="Prescription Pricing Authority _ 1-2-1/Lucky Duck">
-              </li>
-              <li>
-                <img src="images\bengal-sound-wushu-hand.jpg" alt="Bengal
-                Sound _ Wushu Hand">
-              </li>
-              <li>
-                <img src="images\danny-scrilla-n-kromestar-visions.jpg"
-                alt="Danny Scrilla & Kromestar _ Visions">
-              </li>
-              <li>
-                <img src="images\samba-malignant-remixes.jpg" alt="Samba _
-                Malignant (Remixes)">
-              </li>
-              <li>
-                <img src="images\bicep-glue-ep.jpg" alt="Bicep _ Glue EP">
-              </li>
-              <li>
-                <img src="images\compa-not-a-kick.jpg" alt="Compa _ Not a
-                Kick">
-              </li>
-              <li>
-                <img src="images\muttley-yam-yam.jpg" alt="Muttley - Yam
-                Yam">
-              </li>
-              <li>
-                <img src="images\various-artists-sick-music-2018.jpg"
-                alt="Various Artists _ Sick Music 2018">
-              </li>
-              <li>
-                <img src="images\janelle-monae-dirty-computer-explicit.jpg"
-                alt="Janelle Monae - Dirty Computer [Explicit]">
-              </li>
-            </ul>
-          </div>
+        <img src="builds/build-images/build3b.png" alt="screenshot of aug app">
+        <div class="release-nav">
+          <ul>
+            <li>
+              <img src="images\51iwGgCY-GL._SS500.jpg" alt="Bobby Feeno _
+              Flamingo & Koval (Explicit)">
+            </li>
+            <li>
+              <img src="images\CS3711831-02A-BIG.jpg" alt="VARIOUS ARTISTS
+              _ Partial#4">
+            </li>
+            <li>
+              <img src="images\CS3697651-02A-BIG.jpg" alt="JIMPSTER _
+              Burning Up">
+            </li>
+            <li>
+              <img src="images\CS3656284-02A-BIG.jpg" alt="PEGGY GOU _
+              It Makes You Forget (Itgehane)">
+            </li>
+            <li>
+              <img src="images\516jf5plwaL._SS500.jpg" alt="Solange _
+              A Seat at the Table [Explicit]">
+            </li>
+            <li>
+              <img src="images\CS3687657-02A-BIG.jpg"
+              alt="MAJISTRATE/PACSO/DOMINATOR & LOGAN D/EGO TRIPPIN _ Re-Fixes">
+            </li>
+            <li>
+              <img src="images\dynamite-mc-origin-unknown-hotness.jpg"
+              alt="Dynamite MC, Origin Unknown _ Hotness">
+            </li>
+            <li>
+              <img src="images\j-cole-kod-explicit.jpg" alt="J. Cole _
+              KOD [Explicit]">
+            </li>
+            <li>
+              <img src="images\sub-zero-n-dj-limited-vibrations-ep.jpg"
+              alt="Sub Zero & DJ Limited _ Vibrations EP">
+            </li>
+            <li>
+              <img src="images\sza-ctrl-explicit.jpg"
+              alt="SZA _ Ctrl [Explicit]">
+            </li>
+            <li>
+              <img src="images\ram-trilogy-various-artists-ram-25.jpg"
+              alt="Ram Trilogy/ Various Artists _ Ram 25">
+            </li>
+            <li>
+              <img src="images\prescription-pricing-authority-1-2-1-lucky-duck.jpg"
+              alt="Prescription Pricing Authority _ 1-2-1/Lucky Duck">
+            </li>
+            <li>
+              <img src="images\bengal-sound-wushu-hand.jpg" alt="Bengal
+              Sound _ Wushu Hand">
+            </li>
+            <li>
+              <img src="images\danny-scrilla-n-kromestar-visions.jpg"
+              alt="Danny Scrilla & Kromestar _ Visions">
+            </li>
+            <li>
+              <img src="images\samba-malignant-remixes.jpg" alt="Samba _
+              Malignant (Remixes)">
+            </li>
+            <li>
+              <img src="images\bicep-glue-ep.jpg" alt="Bicep _ Glue EP">
+            </li>
+            <li>
+              <img src="images\compa-not-a-kick.jpg" alt="Compa _ Not a
+              Kick">
+            </li>
+            <li>
+              <img src="images\muttley-yam-yam.jpg" alt="Muttley - Yam
+              Yam">
+            </li>
+            <li>
+              <img src="images\various-artists-sick-music-2018.jpg"
+              alt="Various Artists _ Sick Music 2018">
+            </li>
+            <li>
+              <img src="images\janelle-monae-dirty-computer-explicit.jpg"
+              alt="Janelle Monae - Dirty Computer [Explicit]">
+            </li>
+          </ul>
+        </div>
           <div class="augtab">
             aug
           </div>
+        <p>
+          Expand to see which tracks you heard from that release, when, how many
+          times, at which site(s) and for how long.
+        </p>
         <p>Configure <em class="aug-em">aug</em> the way <em>you</em> want. Organize your mosaic by when,
           where or how often you listen online.
         </p>

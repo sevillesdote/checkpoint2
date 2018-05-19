@@ -15,20 +15,16 @@ li {
   display: flex;
   align-items: center;
   list-style-type: none;
-  padding: 0.4em 0.2em;
+  padding: 0.2em;
   color: ghostwhite;
 }
 img{
   width: 4em;
   height: 4em;
-  padding: 0.4em;
+  padding: 0.2em;
 }
 em{
   color: magenta;
-}
-.release-nav{
-  display: flex;
-  justify-content: flex-end;
 }
 ul{
   /* i figured out why i couldn't center these in line with the social-media
@@ -84,9 +80,9 @@ aside li{
   display: flex;
   justify-content: flex-end;
   margin: auto 0;
-  padding: 0 2px;
+  padding: 0.2em;
   width: 100%;
-  min-height: 35px;
+  min-height: 3.5em;
   background-color: rgba(0,0,0,0.8);
   border: 1px solid orange;
   border-width: 1px 0;
@@ -100,7 +96,7 @@ aside li{
   font-size: 15px;
   text-align: center;
   background-color: orange;
-  border-radius: 0 0 4px 4px;
+  border-radius: 0 0 0.4em 0.4em;
   color: rgba(0,0,0,0.8);
 }
 .trigger{
@@ -109,43 +105,41 @@ aside li{
 }
 .trigger:hover {
   display: inline-block;
-  margin: 0.2em auto;
-  transform: scale(4) translate(-25%, 25%);
+  /* margin: 0.2em auto; */
+  transform: scale(3.1) translate(-36%, 36%);
 }
 .focus-li:hover {
   display: flex;
   align-items: center;
   position: relative;
-  padding: 0.4em 0.4em 0.4em 0;
-  margin: 0.4em;
-  border-radius: 0.4em;
+  border-radius: 0.3em 0.2em 0.2em 0.3em;
   background-color: orange;
-  border: 1px solid orange;
 }
 .focus-li .build-3 {
   background-color: transparent;
 }
-.focus-li:before {
+/* .focus-li:before {
   position: absolute;
   content: "";
-  left: -0.9em;
+  right: 130%;
   bottom: 0;
   width: 0;
   height: 0;
   border-right: 0.8em solid orange;
-  border-top: 8.3em solid transparent;
-  border-bottom: 8.3em solid transparent;
-}
-.focus-li:before .build-3 {
-  position: absolute;
+  border-top: 0.8em solid transparent;
+  border-bottom: 0.8em solid transparent;
+} */
+.focus-li:before {
   content: "";
+  position: absolute;
   left: -0.8em;
   bottom: 0;
   width: 0;
   height: 0;
-  border-right: 0.8em solid orange;
-  border-top: 8.3em solid transparent;
-  border-bottom: 8.3em solid transparent;
+  border-right: 1em solid orange;
+  border-top: 2.4em solid transparent;
+  border-bottom: 2.4em solid transparent;
+  background-color: #262626;
 }
 .triangle-left {
   /* visibility: hidden; */
@@ -194,4 +188,6 @@ aside li{
   display: block;
   width: 15em;
   height: 15em;
+  padding: 0;
+  margin: 0;
 }
