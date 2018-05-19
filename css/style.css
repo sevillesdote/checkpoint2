@@ -14,7 +14,10 @@ a{
 li {
   display: flex;
   align-items: center;
+  box-sizing: border-box;
   list-style-type: none;
+  padding: 2px;
+  color: ghostwhite;
 }
 img{
   width: 4em;
@@ -36,6 +39,7 @@ ul{
   nested in to make it center in the header. */
   display: flex;
   justify-content: space-between;
+  align-items: flex-start;
   margin: 0;
   padding: 0;
 }
@@ -67,16 +71,28 @@ aside li{
   color: orange;
   font-style: normal;
 }
+.release-nav{
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+  margin: auto 0;
+  padding: 0 2px;
+  width: 100%;
+  min-height: 35px;
+  background-color: rgba(0,0,0,0.8);
+  border: 1px solid orange;
+  border-width: 1px 0;
+}
 .focus-li {
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   position: relative;
   padding: 0.4em 0.4em 0.4em 0;
   margin: 0.4em;
   border-radius: 0.4em;
   background-color: orange;
 }
-.focus-li::before {
+.focus-li:before {
   position: absolute;
   content: "";
   left: -0.8em;
@@ -86,6 +102,13 @@ aside li{
   border-right: 0.8em solid orange;
   border-top: 8.3em solid transparent;
   border-bottom: 8.3em solid transparent;
+}
+.triangle-left {
+  width: 0;
+  height: 0;
+  border-top: 1em solid transparent;
+  border-right: 1em solid #262626;
+  border-bottom: 1em solid transparent;
 }
 .tooltip .tooltiptext {
   position: absolute;
@@ -104,23 +127,11 @@ aside li{
   margin-left: 0.3em;
   border-radius: 0.4em;
 }
-.triangle-container{
-  display: flex;
-  align-items: center;
-  height: inherit;
-}
-.triangle-left {
-  width: 0;
-  height: 0;
-  border-top: 1em solid transparent;
-  border-right: 1em solid #262626;
-  border-bottom: 1em solid transparent;
+.tooltip:hover .tooltiptext {
+  visibility: visible;
 }
 .tooltip-build-2 {
-  /* i couldn't figure out how to use flex to automate the width of the tooltip
-  box, and i was running out of time, so i just manually stuck it in there
-  and customized it to each build. obviously this is cheating! */
-  width: 1.35em;
+  box-sizing: border-box;
   right: 1.01em;
   text-align: right;
 }
