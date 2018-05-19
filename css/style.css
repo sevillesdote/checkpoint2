@@ -112,7 +112,8 @@ aside li{
   display: flex;
   align-items: center;
   position: relative;
-  border-radius: 0.3em 0.2em 0.2em 0.3em;
+  box-sizing: border-box;
+  border-radius: 0 0.2em 0.2em 0;
   background-color: orange;
 }
 .focus-li .build-3 {
@@ -132,14 +133,14 @@ aside li{
 .focus-li:before {
   content: "";
   position: absolute;
-  left: -0.8em;
+  /* box-sizing: border-box; */
+  left: -1.1em;
   bottom: 0;
   width: 0;
   height: 0;
   border-right: 1em solid orange;
   border-top: 2.4em solid transparent;
   border-bottom: 2.4em solid transparent;
-  background-color: #262626;
 }
 .triangle-left {
   /* visibility: hidden; */
