@@ -92,7 +92,7 @@ aside li{
   transition: height 0.2s;
 }
 .app-nav-trigger:hover{
-  height: 21em;
+  height: 16.2em;
 }
 .augtab{
   align-self: flex-end;
@@ -110,9 +110,34 @@ aside li{
   transition: 0.2s;
 }
 .release-trigger:hover {
-  transform: scale(3.4) translate(-36%, 36%);
+  transform: scale(3.4) translate(-36%, 4%);
 }
+
+/* i tried creating a trigger out of the entire .app-nav to keep the translate
+from jittering, but it's not working. */
+
+/* .release-trigger:hover .li-trigger{
+  transform: scale(3.4) translate(-36%, 36%);
+} */
+
+
+/* i also tried putting each li in a div to create a trigger, but it doesn't
+work. */
+
+/* .li-trigger{
+  box-sizing: border-box;
+  height: 4.8em;
+  width: 4.8em;
+  border: 1px solid white;
+} */
+
+/* .release-trigger:hover .li-trigger{
+  transform: scale(3.4) translate(-36%, 36%);
+} */
+
 .focus-li:hover {
+/* this is to create a border and an arrow pointing to the tooltip only when
+it's transformed, so there's only a :hover class for .focus-li. */
   display: flex;
   align-items: center;
   box-sizing: border-box;
@@ -163,8 +188,4 @@ aside li{
 .listened {
   font-weight: bold;
   color: magenta;
-}
-.focus-img{
-  padding: 0;
-  margin: 0;
 }
