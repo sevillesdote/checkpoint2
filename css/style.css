@@ -238,3 +238,94 @@ it's transformed, so there's only a :hover class for .focus-li. */
   font-weight: bold;
   color: magenta;
 }
+.info{
+  display: flex;
+  flex-direction: column;
+  float: left;
+  width: 300px;
+  /* i wonder how i can inherit the height from the img nested in the same class?
+  in this case it's .focus-img */
+  height: 150px;
+  margin: 4px;
+  background-color: #262626;
+  border-radius: 4px 0 0 4px;
+  color: fuchsia;
+}
+.track-number{
+  display: flex;
+  align-content: flex-start;
+  align-items: flex-start;
+}
+.title-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 5px 5px 2.55px 5px;
+  padding: 0;
+  height: calc(20%);
+  width: calc(100% - 12px);
+  font-size: 12px;
+  border-radius: 5px;
+  border: 1px solid ghostwhite;
+}
+.title-info-top{
+  width: 0 auto;
+  height: inherit calc(50% - 10px);
+  border-bottom: 1px dotted dimgray;
+}
+.title-info-bottom{
+  height: inherit 50%;
+  width: 0 auto;
+}
+.track-info{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 2.5px 5px 5px 5px;
+  height: calc(80%);
+  width: calc(100% - 12px);
+  border-radius: 5px;
+  border: 1px solid ghostwhite;
+}
+.track-bar{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: calc(14.285%);
+  width: 0 auto;
+  border-bottom: 1px dotted dimgray;
+}
+.track-percentage{
+  width: calc(70%);
+  height: calc(60%);
+  padding: 0 1px;
+  border-radius: 5px;
+  border: 1px solid fuchsia;
+  font-size: 40%;
+  color: ghostwhite;
+}
+.p15{
+  background: linear-gradient(90deg, fuchsia 15%, #262626 0%);
+}
+.p16{
+  background: linear-gradient(90deg, fuchsia 16%, #262626 0%);
+}
+.p40{
+  background: linear-gradient(90deg, fuchsia 40%, #262626 0%);
+}
+.p53{
+  background: linear-gradient(90deg, fuchsia 53%, #262626 0%);
+}
+.p60{
+  background: linear-gradient(90deg, fuchsia 60%, #262626 0%);
+}
+.p63{
+  background: linear-gradient(90deg, fuchsia 63%, #262626 0%);
+}
+.p91{
+  background: linear-gradient(90deg, fuchsia 91%, #262626 0%);
+}
+.silent{
+  border-color: dimgray;
+  color: dimgray;
+}
