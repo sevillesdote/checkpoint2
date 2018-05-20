@@ -37,12 +37,13 @@ img{
 em{
   color: magenta;
 }
-ul{
+ul, .augtab:hover ul{
   /* i figured out why i couldn't center these in line with the social-media
   icons in checkpoint 1. flexbox only applies to the first child element, so i
   needed to assign display: flex to each level of nested <div>s that i needed
   to center. i added display: flex and styling to the <nav> container this is
   nested in to make it center in the header. */
+  visibility: visible;
   display: flex;
   flex-basis: auto;
   justify-content: space-between;
@@ -50,11 +51,23 @@ ul{
   margin: 0;
   padding: 0;
 }
+.augtab ul{
+  visibility: hidden;
+  transition: width 2s;
+}
+.augtab:hover ul{
+  transform: width();
+}
+.augtab ul li:nth-child(1){
+  /* this is to make the 'aug' entry visible in build-3, which is the build where
+  the visitor can hover over the tab to see more settings expand*/
+  visibility: visible;
+}
 li {
   display: flex;
   align-items: center;
   list-style-type: none;
-  padding: 0.2em;
+  padding: 0.3em;
   color: ghostwhite;
 }
 main p, main h2{
@@ -141,13 +154,20 @@ path{
   align-self: flex-end;
   /* this is to make the 'aug' tab justify to the right. */
   height: 1.3em;
-  width: 3.2em;
+  padding: 0 0.4em;
   margin: 0 0.1em;
+  width: 2.3em;
   font-size: 15px;
   text-align: center;
   background-color: orange;
   border-radius: 0 0 0.4em 0.4em;
   color: rgba(0,0,0,0.8);
+}
+.build-4 .augtab{
+  transition: width 0.2s;
+}
+.build-4 .augtab:hover{
+  width: 16em;
 }
 .release-trigger{
   transition: 0.2s;
@@ -187,6 +207,15 @@ work. */
 .build-3{
   margin: 0 auto;
 }
+.build-4{
+  padding: 0;
+  width: 100%;
+  border-top: 1px solid orange;
+}
+.build-4 li {
+  padding: 0 0.3em;
+  color: #262626;
+}
 .focus-li:hover, .build-3 .focus-li {
 /* this is to create a border and an arrow pointing to the tooltip only when
 it's transformed, so there's only a :hover class for .focus-li. */
@@ -196,6 +225,10 @@ it's transformed, so there's only a :hover class for .focus-li. */
   margin: 5em 0.5em 0.5em 0.5em;
   border-radius: 0 0.2em 0.2em 0;
   background-color: orange;
+}
+.build-3 .focus-li{
+  margin: 0.5em;
+  /* transform: width(20em); */
 }
 .focus-li:before {
   content: "";
@@ -229,12 +262,6 @@ it's transformed, so there's only a :hover class for .focus-li. */
   box-sizing: border-box;
   border-radius: 0.4em;
 }
-.build-3 .tooltip .tooltiptext {
-  visibility: visible;
-  width: 14.5em;
-  left: 101%;
-  text-align: left;
-}
 .tooltip:hover .tooltiptext {
   visibility: visible;
 }
@@ -242,11 +269,6 @@ it's transformed, so there's only a :hover class for .focus-li. */
   right: 101%;
   /* text-align: right; */
 }
-/* .tooltip-build-3 {
-  width: 14.5em;
-  left: 101%;
-  text-align: left;
-} */
 .listened {
   font-weight: bold;
   color: magenta;
