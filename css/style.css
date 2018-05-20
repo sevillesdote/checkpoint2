@@ -78,10 +78,6 @@ nav{
   display: flex;
   justify-content: space-between;
 }
-.topbox{
-  flex-wrap: wrap;
-  z-index: 1;
-}
 nav li{
   padding: 1em;
 }
@@ -115,6 +111,12 @@ path{
   but still appear below it, as if the tab was a block element. the next element
   will also appear below the bottom edge of the 'aug' tab, instead of below the
   bottom edge of .release-nav (which would be inline with the 'aug' tab).  */
+}
+.expanded {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  height: 18.2em;
 }
 .app-nav{
   box-sizing: border-box;
