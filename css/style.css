@@ -66,7 +66,7 @@ aside li{
   color: orange;
   font-style: normal;
 }
-.release-container{
+.app-container{
   display:flex;
   flex-direction: column;
   /* this is to keep 'aug' tab nested with the .release-nav (the album pictures)
@@ -74,7 +74,7 @@ aside li{
   will also appear below the bottom edge of the 'aug' tab, instead of below the
   bottom edge of .release-nav (which would be inline with the 'aug' tab).  */
 }
-.release-nav{
+.app-nav{
   box-sizing: border-box;
   position: relative;
   display: flex;
@@ -86,6 +86,13 @@ aside li{
   background-color: rgba(0,0,0,0.8);
   border: 1px solid orange;
   border-width: 1px 0;
+}
+.app-nav-trigger{
+  height: 5.4em;
+  transition: height 0.2s;
+}
+.app-nav-trigger:hover{
+  height: 17em;
 }
 .augtab{
   align-self: flex-end;
@@ -99,58 +106,34 @@ aside li{
   border-radius: 0 0 0.4em 0.4em;
   color: rgba(0,0,0,0.8);
 }
-.trigger{
-  display: block;
-  transition: width 0.2s, height 0.2s, transform 0.2s;
+.release-trigger{
+  transition: 0.2s;
 }
-.trigger:hover {
-  display: inline-block;
-  /* margin: 0.2em auto; */
-  transform: scale(3.1) translate(-36%, 36%);
+.release-trigger:hover {
+  transform: scale(3.4) translate(-36%, 36%);
 }
 .focus-li:hover {
   display: flex;
   align-items: center;
   position: relative;
   box-sizing: border-box;
+  margin: 0.5em;
   border-radius: 0 0.2em 0.2em 0;
   background-color: orange;
 }
-.focus-li .build-3 {
-  background-color: transparent;
-}
-/* .focus-li:before {
-  position: absolute;
-  content: "";
-  right: 130%;
-  bottom: 0;
-  width: 0;
-  height: 0;
-  border-right: 0.8em solid orange;
-  border-top: 0.8em solid transparent;
-  border-bottom: 0.8em solid transparent;
-} */
 .focus-li:before {
+  /* visibility: hidden; */
   content: "";
   position: absolute;
-  /* box-sizing: border-box; */
-  left: -1.1em;
-  bottom: 0;
+  left: -1em;
   width: 0;
   height: 0;
   border-right: 1em solid orange;
-  border-top: 2.4em solid transparent;
-  border-bottom: 2.4em solid transparent;
+  border-top: 2.2em solid transparent;
+  border-bottom: 2.2em solid transparent;
 }
-.triangle-left {
-  /* visibility: hidden; */
-  display: flex;
-  align-items: center;
-  width: 0;
-  height: 0;
-  border-top: 1em solid transparent;
-  border-right: 1em solid #262626;
-  border-bottom: 1em solid transparent;
+.focus-li:hover img{
+  padding: 0;
 }
 .tooltip {
     position: relative;
@@ -164,17 +147,18 @@ aside li{
   right: 120%;
   background-color: rgba(0, 0, 0, 0.77);
   text-align: right;
+  vertical-align: middle;
   font-family: 'Varela', sans-serif;
   color: ghostwhite;
   height: 4.6em;
   width: 15em;
-  font-size: 0.8em;
+  font-size: 0.25em;
   padding: 0.3em 0.5em;
   margin-left: 0.3em;
   box-sizing: border-box;
   border-radius: 0.4em;
 }
-.tooltip:hover .tooltiptext {
+.focus-li:hover:before .tooltip:hover .tooltiptext {
   visibility: visible;
 }
 .tooltip-build-2 {
@@ -186,9 +170,6 @@ aside li{
   color: magenta;
 }
 .focus-img{
-  display: block;
-  width: 15em;
-  height: 15em;
   padding: 0;
   margin: 0;
 }
