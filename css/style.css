@@ -1,11 +1,4 @@
 html{
-  font-size: 62.5%;
-  /* i read at https://kyleschaeffer.com/development/css-font-size-em-vs-px-vs-pt-vs/
-  that using percent to font-size the body element helps users scale text
-  consistently on any device, and then using em to size all child elements keeps
-  it mobile-friendly but still scalable across a smaller, more consistent
-  range than percent only. the base % of 62.5 also translates to 1em = 10pt,
-  1.1em = 11 pt, 1.2 em = 12 pt etc. in the children. */
   font-family: 'Varela', sans-serif;
   text-align: center;
 }
@@ -22,6 +15,7 @@ body{
 main{
 /* this forces enough space at the top to fix the header */
   padding: 5em 0;
+  margin 0;
 }
 main p, main h2{
 /* this indents the text elements a bit from the header and demo app-builds */
@@ -85,6 +79,7 @@ li {
 }
 header{
   position: fixed;
+  overflow: hidden;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
@@ -503,4 +498,16 @@ footer ul{
 }
 footer li{
   padding: 1em;
+}
+/* Small and up (Landscape Phones) */
+@media (min-width: 576px) {
+  html{
+    font-size: 200%;
+  }
+  header{
+    font-size: 100%;
+  }
+  aside{
+    display: none;
+  }
 }
