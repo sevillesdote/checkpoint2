@@ -99,10 +99,10 @@ nav li{
   padding: 1em;
 }
 aside{
-  /* this is the social media links on the right side of the header */
+  /* this is the social media links on the right side of the header (desktop only) */
   display: flex;
   justify-content: space-between;
-}
+  }
 aside li{
   margin-top: 0.15em;
   /* the social-media icons aren't quite centered, so this top margin is to even
@@ -302,9 +302,9 @@ links */
 .release-trigger:hover {
   transform: scale(3.4) translate(-36%, 4%);
 }
-
 .build-3{
   margin: 0 auto;
+  display: none;
 }
 .build-4{
   padding: 0;
@@ -500,14 +500,12 @@ footer li{
 }
 /* Small and up (Landscape Phones) */
 @media (min-width: 576px) {
+
   html{
     font-size: 200%;
   }
   header{
     font-size: 100%;
-  }
-  aside{
-    display: none;
   }
   .build-3{
     display: none;
