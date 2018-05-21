@@ -226,11 +226,12 @@ ul, .augtab:hover ul, .augtab:hover ul a{
   inline with 'aug' tab */
   display: flex;
   justify-content: space-between;
+  margin: 0;
 }
 .aug-caption-text{
   /* this styles the caption text under two of the aug demo builds */
   justify-self: center;
-  padding: 0.4em;
+  /* padding: 0.4em; */
   font-style: italic;
   color: orange;
 }
@@ -282,7 +283,6 @@ ul, .augtab:hover ul, .augtab:hover ul a{
   padding: 0 0.4em;
   margin: 0 0.1em;
   width: 2.3em;
-  font-size: 15px;
   text-align: center;
   background-color: orange;
   border-radius: 0 0 0.4em 0.4em;
