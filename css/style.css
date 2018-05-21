@@ -20,9 +20,11 @@ body{
   color: gainsboro;
 }
 main{
+/* this forces enough space at the top to fix the header */
   padding: 5em 0;
 }
 main p, main h2{
+/* this indents the text elements a bit from the header and demo app-builds */
   text-align: justify;
   padding: 0 1em;
 }
@@ -35,8 +37,10 @@ h2 {
   font-size: 1.4em;
 }
 h2:nth-of-type(even) {
+  /* this aligns every other h2 to the right */
   text-align: right;
 }
+/* these cycle the h2s through three font colors */
 h2:nth-of-type(3n+1) {
   color: aqua;
 }
@@ -61,21 +65,21 @@ a:visited {
   color: dimgray;
 }
 img{
+  /* this is the intro tile size in the collapsed/ inactive app builds */
   width: 4em;
   height: 4em;
   padding: 0.2em;
 }
 li {
+  /* all of the lis are flexed, centered and padded */
   display: flex;
   align-items: center;
   list-style-type: none;
   padding: 0.2em;
   color: ghostwhite;
 }
-em{
-  color: magenta;
-}
 .aug-em{
+  /* this turns all instances of the word 'aug' orange */
   color: orange;
   font-style: normal;
 }
@@ -85,7 +89,6 @@ header{
   justify-content: space-evenly;
   align-items: center;
   height: 5em;
-  /* border: 1px solid black; */
   margin: auto 0;
   padding: 0;
   width: 100%;
@@ -94,6 +97,7 @@ header{
   color: ghostwhite;
 }
 nav{
+  /* this is the text links on the left side of the header */
   display: flex;
   justify-content: space-between;
 }
@@ -101,6 +105,7 @@ nav li{
   padding: 1em;
 }
 aside{
+  /* this is the social media links on the right side of the header */
   display: flex;
   justify-content: space-between;
 }
@@ -111,20 +116,25 @@ aside li{
   padding: 0.3em;
 }
 svg {
+  /* this sizes the social media icons */
   width: 2.5em;
   height: 2.5em;
   viewBox: 0 0 2.5em 2.5em;
 }
 path{
+  /* this colors the social media icons white */
   fill: #FFF;
   fill-rule: evenodd;
 }
 .op-sys {
+  /* this is the container for the operating system buttons */
   display: flex;
   justify-content: center;
   margin: 1em 0 1em 0;
 }
 .toggle{
+  /* this styles the left and right op-sys buttons differently (so the center is
+  a straight line with no margin)  */
   height: 2em;
   width: 10em;
 }
@@ -136,6 +146,7 @@ path{
   border-radius: 0 1em 1em 0;
   border-width: 0.5em 0.5em 0.5em 0;
 }
+/* these style each op-sys button with brand colors for both as-is and hover states */
 .windows{
   border: solid #0078D7;
   color: #0078D7;
@@ -153,19 +164,25 @@ path{
   color: #000000;
 }
 label{
+  /* centers button label */
   display: flex;
   align-items: center;
 }
 input[type="radio"]{
+  /* 'mac' and 'windows' are radio buttons; this hides the buttons and turns
+  the entire .toggle-left and .toggle-right elements into radio buttons. i
+  haven't added any javascript yet for the button behavior. */
   display: none;
-  height: 50px;
-  width: 200px;
+  height: 2em;
+  width: 5em;
 }
 .trial {
+  /* this is the container for both 'try' buttons */
   display: flex;
   justify-content: center;
 }
 .trial button{
+  /* this is the styling for each 'try' button */
   float:left;
   height: 3em;
   min-width: 10em;
@@ -180,7 +197,7 @@ input[type="radio"]{
   background-color: orange;
   color: #000000;
 }
-ul, .augtab:hover ul{
+ul, .augtab:hover ul, .augtab:hover ul a{
   /* i figured out why i couldn't center these in line with the social-media
   icons in checkpoint 1. flexbox only applies to the first child element, so i
   needed to assign display: flex to each level of nested <div>s that i needed
@@ -188,39 +205,61 @@ ul, .augtab:hover ul{
   nested in to make it center in the header. */
   visibility: visible;
   display: flex;
-  flex-basis: auto;
+  /* flex-basis: auto; */
   justify-content: space-between;
   align-items: flex-start;
+  /* the links in the demo 'aug' tab only aren't affected by link activity. until
+  they expand some settings menus or something and are dummies for demo use only,
+  i wanted to remove the link styling, which would imply clicking them should
+  make something happen. */
+  color: #262626;
   margin: 0;
   padding: 0;
 }
 .augtab ul{
+  /* this is for the settings in build-4 'aug' tab which are hidden until you
+  hover */
   visibility: hidden;
   transition: width 2s;
 }
-.augtab:hover ul{
-  transform: width();
-}
 .augtab ul li:nth-child(1){
-  /* this is to make the 'aug' entry visible in build-3, which is the build where
-  the visitor can hover over the tab to see more settings expand*/
+  /* this is to make the 'aug' entry visible in build-3 before hover */
   visibility: visible;
 }
+.aug-caption{
+  /* this is a container for the two captioned builds, so the captions appear
+  inline with 'aug' tab */
+  display: flex;
+  justify-content: space-between;
+}
+.aug-caption-text{
+  /* this styles the caption text under two of the aug demo builds */
+  justify-self: center;
+  padding: 0.4em;
+  font-style: italic;
+  color: orange;
+}
 .app-container{
+  /* in the two non-captioned builds, this is to keep 'aug' tab nested with the
+  .release-nav (the album pictures) but still appear below it, as if the tab was
+  a block element. the next element will appear BELOW the bottom edge of
+  the 'aug' tab, instead of below the bottom edge of .release-nav (which would
+  be inline with the 'aug' tab and wouldn't look right).  */
   display:flex;
   flex-direction: column;
-  /* this is to keep 'aug' tab nested with the .release-nav (the album pictures)
-  but still appear below it, as if the tab was a block element. the next element
-  will also appear below the bottom edge of the 'aug' tab, instead of below the
-  bottom edge of .release-nav (which would be inline with the 'aug' tab).  */
+  width: 100%;
 }
 .expanded {
+  /* this is an overall aug-build container that creates enough room around
+  build 2 so its height can be expanded on :hover without moving the surrounding
+  text. */
   display: flex;
   justify-content: flex-end;
   align-items: center;
   height: 18.2em;
 }
 .app-nav{
+  /* this is the inside of the app build, where the img tiles line up. */
   box-sizing: border-box;
   display: flex;
   justify-content: flex-end;
@@ -232,6 +271,8 @@ ul, .augtab:hover ul{
   border-width: 1px 0;
 }
 .app-nav-trigger{
+  /* the entire width of the .app-nav is a trigger area when the individual
+  releases enlarge on hover */
   height: 5.4em;
   transition: height 0.2s;
 }
@@ -239,6 +280,7 @@ ul, .augtab:hover ul{
   height: 16.2em;
 }
 .augtab{
+  /* this is the small orange tab aligned right on all the builds */
   align-self: flex-end;
   /* this is to make the 'aug' tab justify to the right. */
   height: 1.3em;
@@ -251,40 +293,21 @@ ul, .augtab:hover ul{
   border-radius: 0 0 0.4em 0.4em;
   color: rgba(0,0,0,0.8);
 }
+/* these next two styles expand the tab on one of the builds with 'settings'
+links */
 .build-4 .augtab{
   transition: width 0.2s;
 }
 .build-4 .augtab:hover{
   width: 16em;
 }
+/* release-trigger is the INDIVIDUAL per-release transforms and translates. */
 .release-trigger{
   transition: 0.2s;
 }
 .release-trigger:hover {
   transform: scale(3.4) translate(-36%, 4%);
 }
-
-/* i tried creating a trigger out of the entire .app-nav to keep the translate
-from jittering, but it's not working. */
-
-/* .release-trigger:hover .li-trigger{
-  transform: scale(3.4) translate(-36%, 36%);
-} */
-
-
-/* i also tried putting each li in a div to create a trigger, but it doesn't
-work. */
-
-/* .li-trigger{
-  box-sizing: border-box;
-  height: 4.8em;
-  width: 4.8em;
-  border: 1px solid white;
-} */
-
-/* .release-trigger:hover .li-trigger{
-  transform: scale(3.4) translate(-36%, 36%);
-} */
 
 .build-3{
   margin: 0 auto;
@@ -299,8 +322,9 @@ work. */
   color: #262626;
 }
 .focus-li:hover, .build-3 .focus-li {
-/* this is to create a border and an arrow pointing to the tooltip only when
-it's transformed, so there's only a :hover class for .focus-li. */
+/* this is to create a border and a left arrow pointing to the tooltip ONLY when
+it's transformed, so there's only a :hover class for .focus-li... there is no
+as-is state. */
   display: flex;
   align-items: center;
   box-sizing: border-box;
@@ -310,9 +334,9 @@ it's transformed, so there's only a :hover class for .focus-li. */
 }
 .build-3 .focus-li{
   margin: 0.5em;
-  /* transform: width(20em); */
 }
 .focus-li:before {
+  /* this creates the left arrow */
   content: "";
   position: absolute;
   left: -1em;
@@ -323,9 +347,13 @@ it's transformed, so there's only a :hover class for .focus-li. */
   border-bottom: 2.2em solid transparent;
 }
 .focus-li:hover img, .build-3 .focus-li img{
+  /* this removes the padding when you hover over build-3; the padding was only
+  needed in build-2. probably a better way to design this but i ran out of time
+  to re-organize it. */
   padding: 0;
 }
 .tooltip .tooltiptext {
+  /* tooltips are only in aug build 2 when you hover over individual releases */
   position: absolute;
   display: block;
   visibility: hidden;
@@ -356,28 +384,23 @@ it's transformed, so there's only a :hover class for .focus-li. */
 }
 .focus-img, .build-3 img{
   /* this enlarges the pics in build-2 on :hover and permanently enlarges the pic
-  in build-3 */
+  in build-3 (as-is state); build-3 has no hover state */
   width: 15em;
   height: 15em;
 }
 .info{
+  /* this is the container for build 3 */
   display: flex;
   flex-direction: column;
   float: left;
   width: 30em;
-  /* i wonder how i can inherit the height from the img nested in the same class?
-  in this case it's .focus-img */
   height: 15em;
   margin: 0.4em;
   background-color: #262626;
   border-radius: 0.4em 0 0 0.4em;
   color: fuchsia;
 }
-.track-number{
-  display: flex;
-  align-content: flex-start;
-  align-items: flex-start;
-}
+/* these are the album title box, top of build 3 */
 .title-info {
   display: flex;
   flex-direction: column;
@@ -399,6 +422,7 @@ it's transformed, so there's only a :hover class for .focus-li. */
   height: inherit 0.5em;
   width: 0 auto;
 }
+/* these are the track info rows, bottom of build 3 */
 .track-info{
   display: flex;
   flex-direction: column;
@@ -408,6 +432,11 @@ it's transformed, so there's only a :hover class for .focus-li. */
   width: calc(100% - 1.2em);
   border-radius: 0.5em;
   border: 0.1em solid ghostwhite;
+}
+.track-number{
+  display: flex;
+  align-content: flex-start;
+  align-items: flex-start;
 }
 .track-bar{
   display: flex;
@@ -427,6 +456,7 @@ it's transformed, so there's only a :hover class for .focus-li. */
   font-size: 0.7em;
   color: ghostwhite;
 }
+/* these .p classes fill the progress bars in the track examples */
 .p15{
   background: linear-gradient(90deg, fuchsia 15%, #262626 0%);
 }
@@ -449,13 +479,15 @@ it's transformed, so there's only a :hover class for .focus-li. */
   background: linear-gradient(90deg, fuchsia 91%, #262626 0%);
 }
 .silent{
+/* these are the rows the theoretical user hasn't listened to and are therefore
+grayed out on the build example */
   border-color: dimgray;
   color: dimgray;
 }
 footer{
   display: flex;
   justify-content: space-evenly;
-  /* margin: auto 0; */
+  margin: auto 0;
   padding: 2em 0;
   width: 100%;
   background-color: #000;
